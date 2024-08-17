@@ -19,5 +19,8 @@
   "devDependencies": {
     "@types/node": "^22.4.0",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@cow-sunday/fp-ts": "^1.2.0"
   }
 }

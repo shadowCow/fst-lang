@@ -1,4 +1,4 @@
-// choose the moves
-moves:
+# choose the moves
+moves
     place_tile
     

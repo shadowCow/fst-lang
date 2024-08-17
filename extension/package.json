@@ -1,7 +1,13 @@
 {
   "name": "extension",
   "version": "1.0.0",
-  "description": "",
+  "publisher": "shadowcow",
+  "description": "TBD",
+  "keywords": [],
+  "categories": [],
+  "author": {
+    "name": "shadowcow"
+  },
   "main": "out/extension.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,14 +15,17 @@
   "engines": {
     "vscode": "^1.75.0"
   },
-  "keywords": [],
-  "author": "",
   "license": "MIT",
   "dependencies": {
     "vscode-languageclient": "^9.0.1"
   },
   "devDependencies": {
     "@types/vscode": "^1.92.0"
+  },
+  "icon": "",
+  "galleryBanner": {
+    "color": "",
+    "theme": "dark"
   },
   "activationEvents": [
     "onLanguage:fst-lang"
@@ -25,19 +34,23 @@
     "languages": [
       {
         "id": "fst-lang",
-        "extensions": [
-          ".fst"
-        ],
         "aliases": [
           "FST"
         ],
-        "configuration": "./languages/fst.language-configuration.json"
+        "extensions": [
+          ".fst"
+        ],
+        "configuration": "./languages/fst.language-configuration.json",
+        "icon": {
+          "light": "",
+          "dark": ""
+        }
       }
     ],
     "grammars": [
       {
         "language": "fst-lang",
-        "scopeName": "fst",
+        "scopeName": "source.fst",
         "path": "./syntaxes/fst.tmGrammar.json"
       }
     ],
@@ -45,6 +58,22 @@
       {
         "language": "fst-lang",
         "path": "./snippets/fst.json"
+      }
+    ],
+    "configuration": {
+      "title": "FST Lang",
+      "properties": {}
+    },
+    "configurationDefaults": {
+      "[fst-lang]": {
+        "editor.wordBasedSuggestions": "off"
+      }
+    },
+    "commands": [
+      {
+        "command": "fst.languageserver.restart",
+        "title": "FST: Restart Language Server",
+        "description": "Restart the language server"
       }
     ]
   }

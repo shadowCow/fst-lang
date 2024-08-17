@@ -1,7 +1,37 @@
 {
   "scopeName": "source.fst",
+  "fileTypes": ["fst"],
   "patterns": [
-    { "name": "keyword.control.fst", "match": "\\b(if|else|while)\\b" }
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    }
   ],
-  "repository": {}
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "comment": "line comments",
+          "name": "comment.line",
+          "match": "//.*$"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "comment": "moves",
+          "name": "storage.type.enum",
+          "match": "(?i)(?:moves)"
+        },
+        {
+          "comment": "declaration separator",
+          "name": "keyword.operator",
+          "match": "\\:"
+        }
+      ]
+    }
+  }
 }

@@ -1,0 +1,51 @@
+{
+  "name": "extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "out/extension.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.92.0"
+  },
+  "activationEvents": [
+    "onLanguage:fst-lang"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "fst-lang",
+        "extensions": [
+          ".fst"
+        ],
+        "aliases": [
+          "FST"
+        ],
+        "configuration": "./languages/fst.language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fst-lang",
+        "scopeName": "fst",
+        "path": "./syntaxes/fst.tmGrammar.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "fst-lang",
+        "path": "./snippets/fst.json"
+      }
+    ]
+  }
+}

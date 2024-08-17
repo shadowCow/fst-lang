@@ -1,0 +1,23 @@
+{
+  "name": "fst-lang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -b",
+    "watch": "tsc -b -w",
+    "lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
+    "postinstall": "cd client && npm install && cd ../server && npm install && cd .."
+  },
+  "keywords": [],
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.4.0",
+    "typescript": "^5.5.4"
+  }
+}

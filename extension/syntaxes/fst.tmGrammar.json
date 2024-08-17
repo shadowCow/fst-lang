@@ -1,0 +1,7 @@
+{
+  "scopeName": "source.fst",
+  "patterns": [
+    { "name": "keyword.control.fst", "match": "\\b(if|else|while)\\b" }
+  ],
+  "repository": {}
+}
